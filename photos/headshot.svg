@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E5D6BB"/>
+      <stop offset="100%" stop-color="#D4C2A1"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C13469"/>
+      <stop offset="100%" stop-color="#DE8B21"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <circle cx="300" cy="270" r="140" fill="#241B12" opacity="0.1"/>
+  <!-- Stylized Portrait Silhouette / Monogram -->
+  <circle cx="300" cy="250" r="95" fill="#241B12"/>
+  <path d="M 180 540 C 180 390, 420 390, 420 540 Z" fill="#241B12"/>
+  <circle cx="300" cy="250" r="75" fill="#F0E6D2"/>
+  <!-- KM Initials in Serif -->
+  <text x="300" y="275" font-family="Georgia, serif" font-size="64" font-weight="900" fill="#C13469" text-anchor="middle" letter-spacing="2">KM</text>
+  
+  <rect x="50" y="580" width="500" height="160" rx="16" fill="#241B12" opacity="0.95"/>
+  <text x="300" y="630" font-family="'Helvetica Neue', sans-serif" font-size="28" font-weight="700" fill="#F0E6D2" text-anchor="middle">KHALID MAKKAWI</text>
+  <text x="300" y="665" font-family="Georgia, serif" font-size="19" font-style="italic" fill="#DE8B21" text-anchor="middle">Marketing &amp; Business Development Senior</text>
+  <text x="300" y="705" font-family="'Helvetica Neue', sans-serif" font-size="14" font-weight="600" fill="#E5D6BB" text-anchor="middle" letter-spacing="3">AMMAN, JORDAN · FMCG &amp; PHARMA</text>
+</svg>

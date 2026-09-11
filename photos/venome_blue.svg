@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <rect width="600" height="800" fill="#0E1726"/>
+  <rect x="40" y="40" width="520" height="720" rx="16" fill="#15243B" stroke="#00A3FF" stroke-width="3"/>
+  
+  <rect x="40" y="40" width="520" height="100" fill="#00A3FF"/>
+  <text x="300" y="102" font-family="Georgia, serif" font-size="30" font-weight="900" fill="#0E1726" text-anchor="middle">VENOME — CLINICAL BLUE</text>
+
+  <!-- Arch Bay Architecture Blueprint Blue -->
+  <g transform="translate(80, 180)">
+    <rect x="30" y="80" width="160" height="340" rx="80" fill="none" stroke="#00A3FF" stroke-width="8"/>
+    <rect x="50" y="180" width="120" height="60" rx="4" fill="#0E1726" stroke="#00A3FF" stroke-width="1"/>
+    <text x="110" y="215" font-family="sans-serif" font-size="12" font-weight="bold" fill="#00A3FF" text-anchor="middle">Clinical Bay 1</text>
+    
+    <rect x="250" y="80" width="160" height="340" rx="80" fill="none" stroke="#00A3FF" stroke-width="8"/>
+    <rect x="270" y="180" width="120" height="60" rx="4" fill="#0E1726" stroke="#00A3FF" stroke-width="1"/>
+    <text x="330" y="215" font-family="sans-serif" font-size="12" font-weight="bold" fill="#00A3FF" text-anchor="middle">Clinical Bay 2</text>
+  </g>
+
+  <rect x="80" y="600" width="440" height="120" rx="10" fill="#00A3FF"/>
+  <text x="300" y="645" font-family="sans-serif" font-size="18" font-weight="900" fill="#0E1726" text-anchor="middle">Re-Skinned Modular Kit</text>
+  <text x="300" y="675" font-family="sans-serif" font-size="13" font-weight="600" fill="#0E1726" text-anchor="middle">Second show deployment at 40% cost reduction</text>
+</svg>

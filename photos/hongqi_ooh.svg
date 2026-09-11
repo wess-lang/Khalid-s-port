@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <rect width="600" height="800" fill="#1C1A1A"/>
+  <!-- Teaser Billboard (Top) -->
+  <g transform="translate(40, 50)">
+    <rect width="520" height="320" rx="10" fill="#0D0D0D" stroke="#A93A22" stroke-width="4"/>
+    <rect x="0" y="0" width="520" height="36" fill="#A93A22"/>
+    <text x="260" y="24" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" letter-spacing="3">AMMAN OOH TEASER PHASE</text>
+    <text x="260" y="160" font-family="'IBM Plex Sans Arabic', serif" font-size="52" font-weight="900" fill="#FFFFFF" text-anchor="middle">٤٣١ كيلو بدينار</text>
+    <text x="260" y="210" font-family="Georgia, serif" font-size="20" font-style="italic" fill="#A93A22" text-anchor="middle">"431 Kilos per Dinar"</text>
+    <rect x="180" y="250" width="160" height="32" rx="16" fill="#241B12" stroke="#A93A22" stroke-width="1"/>
+    <text x="260" y="271" font-family="sans-serif" font-size="12" font-weight="bold" fill="#F0E6D2" text-anchor="middle">#THE_LUXURY_WITHIN</text>
+  </g>
+  
+  <!-- Reveal Billboard (Bottom) -->
+  <g transform="translate(40, 410)">
+    <rect width="520" height="330" rx="10" fill="#0D0D0D" stroke="#DE8B21" stroke-width="4"/>
+    <rect x="0" y="0" width="520" height="36" fill="#DE8B21"/>
+    <text x="260" y="24" font-family="sans-serif" font-size="13" font-weight="bold" fill="#241B12" text-anchor="middle" letter-spacing="3">REVEAL PHASE — HONGQI JORDAN</text>
+    <text x="260" y="125" font-family="'IBM Plex Sans Arabic', serif" font-size="44" font-weight="900" fill="#FFFFFF" text-anchor="middle">امتلك الفخامة</text>
+    <text x="260" y="175" font-family="sans-serif" font-size="22" font-weight="800" fill="#DE8B21" text-anchor="middle">431 JOD / MONTH — 0% DOWN</text>
+    <text x="260" y="210" font-family="sans-serif" font-size="14" fill="#B0B3B8" text-anchor="middle">Total Cash: 26,000 JOD · Flagship Luxury Sedan</text>
+    <rect x="140" y="245" width="240" height="42" rx="6" fill="#A93A22"/>
+    <text x="260" y="272" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">HONGQI LUXURY AUTOMOTIVE</text>
+  </g>
+</svg>

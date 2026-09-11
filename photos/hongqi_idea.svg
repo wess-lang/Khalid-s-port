@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 625" width="100%" height="100%">
+  <rect width="1000" height="625" fill="#141414"/>
+  <!-- Pitch Deck Slide Frame -->
+  <rect x="40" y="40" width="920" height="545" rx="12" fill="#1E1E1E" stroke="#A93A22" stroke-width="3"/>
+  
+  <rect x="40" y="40" width="920" height="70" fill="#282828"/>
+  <text x="80" y="84" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#FFFFFF">HONGQI AUTOMOTIVE — LAUNCH STRATEGY</text>
+  <text x="880" y="84" font-family="sans-serif" font-size="14" font-weight="600" fill="#DE8B21" text-anchor="end">GHS Agency Deck</text>
+
+  <!-- 3 Stage Diagram -->
+  <g transform="translate(80, 150)">
+    <rect width="250" height="380" rx="8" fill="#141414" stroke="#A93A22" stroke-width="2"/>
+    <rect x="0" y="0" width="250" height="40" rx="8" fill="#A93A22"/>
+    <text x="125" y="26" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">STAGE 1: TEASER</text>
+    <text x="125" y="90" font-family="'IBM Plex Sans Arabic', sans-serif" font-size="26" font-weight="bold" fill="#DE8B21" text-anchor="middle">٤٣١ كيلو بدينار</text>
+    <text x="125" y="140" font-family="sans-serif" font-size="13" fill="#B0B3B8" text-anchor="middle">Disruptive billboard stunt</text>
+    <text x="125" y="170" font-family="sans-serif" font-size="13" fill="#B0B3B8" text-anchor="middle">Weight vs Price enigma</text>
+    <text x="125" y="200" font-family="sans-serif" font-size="13" fill="#B0B3B8" text-anchor="middle">Amman High-Traffic OOH</text>
+  </g>
+
+  <g transform="translate(375, 150)">
+    <rect width="250" height="380" rx="8" fill="#141414" stroke="#DE8B21" stroke-width="2"/>
+    <rect x="0" y="0" width="250" height="40" rx="8" fill="#DE8B21"/>
+    <text x="125" y="26" font-family="sans-serif" font-size="15" font-weight="bold" fill="#241B12" text-anchor="middle">STAGE 2: REVEAL</text>
+    <text x="125" y="90" font-family="'IBM Plex Sans Arabic', sans-serif" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">امتلك الفخامة</text>
+    <text x="125" y="140" font-family="sans-serif" font-size="13" fill="#B0B3B8" text-anchor="middle">431 JOD/mo instalment</text>
+    <text x="125" y="170" font-family="sans-serif" font-size="13" fill="#B0B3B8" text-anchor="middle">Zero down payment</text>
+    <text x="125" y="200" font-family="sans-serif" font-size="13" fill="#B0B3B8" text-anchor="middle">Dealership VIP rollout</text>
+  </g>
+
+  <g transform="translate(670, 150)">
+    <rect width="250" height="380" rx="8" fill="#141414" stroke="#156160" stroke-width="2"/>
+    <rect x="0" y="0" width="250" height="40" rx="8" fill="#156160"/>
+    <text x="125" y="26" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">STAGE 3: PLATFORM</text>
+    <text x="125" y="90" font-family="sans-serif" font-size="16" font-weight="900" fill="#DE8B21" text-anchor="middle">#THE_LUXURY_WITHIN</text>
+    <text x="125" y="140" font-family="sans-serif" font-size="13" fill="#B0B3B8" text-anchor="middle">Digital content series</text>
+    <text x="125" y="170" font-family="sans-serif" font-size="13" fill="#B0B3B8" text-anchor="middle">Influencer test drives</text>
+    <text x="125" y="200" font-family="sans-serif" font-size="13" fill="#B0B3B8" text-anchor="middle">Performance Lead Gen</text>
+  </g>
+</svg>

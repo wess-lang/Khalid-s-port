@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <rect width="600" height="800" fill="#F4F8F8"/>
+  <rect x="40" y="40" width="520" height="720" rx="16" fill="#fff" stroke="#156160" stroke-width="4"/>
+  
+  <rect x="40" y="40" width="520" height="110" fill="#156160"/>
+  <text x="300" y="95" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">PHARMA CARE</text>
+  <text x="300" y="128" font-family="sans-serif" font-size="13" font-weight="600" fill="#DE8B21" text-anchor="middle">ANNUAL PHARMACEUTICAL CONFERENCE BOOTH</text>
+
+  <!-- Interactive Detailing Wall & Display Shelves -->
+  <rect x="80" y="190" width="440" height="200" rx="8" fill="#E5D6BB" stroke="#241B12" stroke-width="2"/>
+  <rect x="110" y="220" width="220" height="140" rx="6" fill="#1C1E21"/>
+  <text x="220" y="295" font-family="sans-serif" font-size="14" font-weight="bold" fill="#45BD62" text-anchor="middle">🖥️ Detailing Screen</text>
+  <rect x="350" y="220" width="140" height="140" rx="6" fill="#fff" stroke="#156160" stroke-width="2"/>
+  <text x="420" y="295" font-family="sans-serif" font-size="12" font-weight="bold" fill="#156160" text-anchor="middle">OTC Product Wall</text>
+
+  <rect x="80" y="430" width="440" height="130" rx="8" fill="#156160"/>
+  <text x="300" y="480" font-family="sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Doctor &amp; Pharmacist Detailing</text>
+  <text x="300" y="515" font-family="sans-serif" font-size="13" fill="#E5D6BB" text-anchor="middle">Direct engagement with 350+ healthcare delegates</text>
+
+  <rect x="80" y="590" width="440" height="130" rx="8" fill="#F0E6D2" stroke="#241B12" stroke-width="2"/>
+  <text x="300" y="640" font-family="sans-serif" font-size="16" font-weight="bold" fill="#241B12" text-anchor="middle">B2B Trade Sampling &amp; Literature</text>
+  <text x="300" y="675" font-family="sans-serif" font-size="13" fill="#5C4B3A" text-anchor="middle">Clinical study cards, OTC trial packs and distributor packs</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <rect width="600" height="800" fill="#1A1817"/>
+  <rect x="40" y="40" width="520" height="720" rx="16" fill="#24211E" stroke="#DE8B21" stroke-width="3"/>
+  
+  <rect x="40" y="40" width="520" height="100" fill="#DE8B21"/>
+  <text x="300" y="102" font-family="Georgia, serif" font-size="30" font-weight="900" fill="#241B12" text-anchor="middle">VENOME — GOLD STAND</text>
+
+  <!-- Arch Bay Architecture Blueprint -->
+  <g transform="translate(80, 180)">
+    <!-- Arch 1 -->
+    <rect x="30" y="80" width="160" height="340" rx="80" fill="none" stroke="#DE8B21" stroke-width="8"/>
+    <rect x="50" y="180" width="120" height="60" rx="4" fill="#3D3023" stroke="#DE8B21" stroke-width="1"/>
+    <text x="110" y="215" font-family="sans-serif" font-size="12" font-weight="bold" fill="#DE8B21" text-anchor="middle">Backlit Bay 1</text>
+    
+    <!-- Arch 2 -->
+    <rect x="250" y="80" width="160" height="340" rx="80" fill="none" stroke="#DE8B21" stroke-width="8"/>
+    <rect x="270" y="180" width="120" height="60" rx="4" fill="#3D3023" stroke="#DE8B21" stroke-width="1"/>
+    <text x="330" y="215" font-family="sans-serif" font-size="12" font-weight="bold" fill="#DE8B21" text-anchor="middle">Backlit Bay 2</text>
+  </g>
+
+  <rect x="80" y="600" width="440" height="120" rx="10" fill="#DE8B21"/>
+  <text x="300" y="645" font-family="sans-serif" font-size="18" font-weight="900" fill="#241B12" text-anchor="middle">Modular Exhibition Architecture</text>
+  <text x="300" y="675" font-family="sans-serif" font-size="13" font-weight="600" fill="#241B12" text-anchor="middle">Gold anodised trim · Bespoke retail lighting · Reconfigurable</text>
+</svg>
