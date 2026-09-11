@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <rect width="960" height="540" fill="#181822"/>
+  <rect x="40" y="40" width="880" height="460" rx="12" fill="#222230" stroke="#58B339" stroke-width="2"/>
+  <text x="80" y="90" font-family="sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF">INFLUENCER ROSTER &amp; REACH MODEL</text>
+  <text x="80" y="130" font-family="sans-serif" font-size="15" fill="#9898A8">Handpicked 1.9M–3M Follower Creators · 450K–600K Projected Viewership</text>
+  <rect x="80" y="180" width="240" height="260" rx="8" fill="#181822"/>
+  <text x="200" y="240" font-family="sans-serif" font-size="18" font-weight="bold" fill="#58B339" text-anchor="middle">@ahmadalshayiip</text>
+  <text x="200" y="270" font-family="sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">1.9M Followers</text>
+  <rect x="360" y="180" width="240" height="260" rx="8" fill="#181822"/>
+  <text x="480" y="240" font-family="sans-serif" font-size="18" font-weight="bold" fill="#58B339" text-anchor="middle">@tahhan</text>
+  <text x="480" y="270" font-family="sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">1.9M Followers</text>
+  <rect x="640" y="180" width="240" height="260" rx="8" fill="#181822"/>
+  <text x="760" y="240" font-family="sans-serif" font-size="18" font-weight="bold" fill="#58B339" text-anchor="middle">@lifeassara</text>
+  <text x="760" y="270" font-family="sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">3.0M Followers</text>
+</svg>
