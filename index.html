@@ -230,13 +230,17 @@ a:hover { color: var(--rose); }
 }
 
 
-/* Optimized Cover fit to prevent false overflow trap */
+/* Optimized Cover layout */
 header.cover {
-  padding: 60px 0 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
+  padding: 60px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 961px) {
+  header.cover {
+    overflow: hidden !important;
+  }
 }
 .shot.ad-shot {
   padding: 16px !important;
@@ -346,6 +350,7 @@ section, header.cover {
   left: 0 !important;
   width: 100% !important;
   height: 100vh !important;
+  height: 100dvh !important;
   padding: 96px 0 60px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -1123,9 +1128,9 @@ figure:hover .frame img {
 @media (max-width: 960px) {
   .cover-grid, .case, .sec-head, .skillset, .contact-grid {
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 30px;
   }
-  .arch { max-width: 320px; margin: 0 auto; }
+  .arch { max-width: 280px; margin: 0 auto; }
   .sk { border-right: none !important; }
   .sk:nth-last-child(-n+2) { border-bottom: var(--rule-thin); }
   .sk:last-child { border-bottom: none; }
@@ -1137,16 +1142,124 @@ figure:hover .frame img {
   .contact-lines { grid-template-columns: 1fr; }
   .page-indicator { display: none; }
   .page-nav-controls { bottom: 14px; right: 14px; padding: 4px 10px; }
-  section, header.cover { padding: 72px 0 50px; }
+  section, header.cover {
+    padding: 76px 0 84px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  header.cover {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    min-height: auto;
+  }
   .cover { min-height: auto; }
   .nav-links { display: none; }
+
+  /* Prevent horizontal overflow from hardcoded minimum widths */
+  div[style*="minmax(360px"],
+  div[style*="minmax(300px"],
+  div[style*="minmax(280px"],
+  div[style*="minmax(260px"],
+  ol[style*="minmax(280px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar .wrap { padding: 0 16px; }
+  .nav-inner { gap: 8px; height: 56px; }
+  .brand-mark { font-size: 16px; gap: 8px; }
+  .brand-badge { width: 28px; height: 28px; font-size: 12.5px; border-radius: 6px; }
+  .nav-actions { gap: 6px; }
+  .nav-actions .btn { padding: 7px 10px; font-size: 13px; }
+  .nav-actions .btn span:not(#theme-icon) { display: none; }
+  .nav-actions .btn svg { margin: 0 !important; }
+
+  .shot-head {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    padding: 10px 14px !important;
+  }
+  .shot-head > div:first-child {
+    flex: 1 1 100% !important;
+  }
+
+  .lightbox {
+    padding: 16px 12px;
+  }
+  .lightbox-img {
+    max-width: 96vw;
+    max-height: 75vh;
+  }
+  .lightbox-close {
+    position: fixed !important;
+    top: 14px !important;
+    right: 14px !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 18px !important;
+    z-index: 1010 !important;
+  }
+  .lightbox-caption {
+    font-size: 13.5px;
+    max-width: 92vw;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 560px) {
-  .b2, .b3, .b4, .s4 { grid-template-columns: 1fr; }
-  .wrap { padding: 0 20px; }
-  .cover { padding: 40px 0 36px; }
-  .contact-lines { font-size: 15px; }
+  .b2, .b3, .b4, .s4 { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .wrap { padding: 0 16px; }
+  section, header.cover { padding: 68px 0 84px !important; }
+  .cover { padding: 20px 0 24px; }
+  .cover h1 { font-size: clamp(38px, 11vw, 56px) !important; line-height: 1.02 !important; }
+  .title { font-size: clamp(17px, 5vw, 22px) !important; margin: 14px 0 0 !important; }
+  .cover-bio { font-size: 15px !important; margin-top: 12px !important; }
+  .contact-lines { font-size: 14px !important; gap: 8px !important; margin-top: 20px !important; padding-top: 16px !important; }
+  .contact-item { font-size: 13.5px !important; word-break: break-word !important; }
+  .arch { max-width: 240px !important; margin: 18px auto 0 !important; border-radius: 16px !important; }
+  
+  .sec-head h2 { font-size: clamp(28px, 8vw, 40px) !important; }
+  .sec-head .intro p { font-size: 15px !important; }
+
+  /* 4-column metrics transform into clean 2x2 grid */
+  .shot-container div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px 8px !important;
+  }
+
+  /* Trade marketing module cards compact padding */
+  div[style*="minmax(360px"] > div,
+  div[style*="padding:28px"] {
+    padding: 18px 16px !important;
+  }
+
+  .stat { padding: 16px 14px; }
+  .stat b { font-size: 28px; }
+
+  .contact h2 { font-size: clamp(32px, 9vw, 48px) !important; }
+  .contact .lines { font-size: 15.5px !important; line-height: 1.8 !important; }
+  .contact-actions { padding: 20px 16px !important; }
+
+  .page-nav-controls {
+    bottom: 12px;
+    right: 12px;
+    padding: 4px 8px;
+    gap: 4px;
+  }
+  .page-nav-counter { font-size: 11px; }
+  .page-nav-btn { width: 24px; height: 24px; }
+
+  .toast {
+    bottom: 74px !important;
+    right: 16px !important;
+    left: 16px !important;
+    justify-content: center !important;
+    font-size: 13.5px !important;
+    padding: 10px 16px !important;
+  }
 }
 
 @media print {
@@ -1482,7 +1595,8 @@ body {
         <button class="btn btn-icon" id="theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
           <span id="theme-icon">🌓</span>
         </button>
-        <a href="https://wa.me/962796046222" target="_blank" rel="noopener" class="btn" title="WhatsApp Chat">
+        <a href="https://wa.me/962796046222" target="_blank" rel="noopener" class="btn" title="WhatsApp Chat" aria-label="WhatsApp Chat">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.53 2.01.815 3.09.815 3.182 0 5.768-2.586 5.768-5.766 0-3.18-2.586-5.767-5.768-5.767zm3.364 8.163c-.141.398-.711.737-1.02.77-.282.03-.647.05-1.921-.479-1.579-.654-2.617-2.261-2.697-2.368-.08-.107-.643-.855-.643-1.63 0-.776.406-1.157.55-1.311.144-.153.313-.192.418-.192.104 0 .209.001.3.006.096.005.226-.037.353.27.13.313.444 1.082.483 1.161.04.08.067.173.013.279-.053.107-.08.173-.16.266-.08.093-.168.207-.24.278-.08.08-.163.167-.07.327.093.16.413.682.887 1.103.61.543 1.124.711 1.284.791.16.08.254.067.348-.04.093-.107.402-.469.51-.63.107-.16.214-.133.36-.08.146.053.93.439 1.089.518.16.08.267.12.307.186.04.067.04.387-.101.785z"/></svg>
           <span>WhatsApp</span>
         </a>
       </div>
@@ -1810,7 +1924,7 @@ body {
       </div>
 
       <!-- TIER 1: THE TWO ALL-TIME RECORD BREAKERS (Rank 1 & Rank 2) -->
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; margin-bottom:32px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap:24px; margin-bottom:32px;">
         
         <!-- RANK #1: SH002 Viral Engagement ($0.00121 / Eng) -->
         <div class="shot-container" style="border:1px solid rgba(245,158,11,0.45); border-radius:12px; overflow:hidden; background:var(--paper-card); box-shadow:0 8px 30px rgba(0,0,0,0.5);">
@@ -1879,7 +1993,7 @@ body {
       </div>
 
       <!-- TIER 2: HIGH-EFFICIENCY SCALED MESSAGING (Rank 3 → Rank 6) -->
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-bottom:32px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap:20px; margin-bottom:32px;">
 
         <!-- RANK #3: Msg campaign test01 ($0.21 / Lead) -->
         <div class="shot-container" style="border:1px solid rgba(56,189,248,0.25); border-radius:12px; overflow:hidden; background:var(--paper-card);">
@@ -2170,7 +2284,7 @@ body {
     </div>
 
     <!-- Modules Grid -->
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:24px; margin-bottom:44px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap:24px; margin-bottom:44px;">
 
       <!-- 01 — Pricing Strategy -->
       <div style="background:var(--paper-card); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:28px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--shadow-sm); transition:border-color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.borderColor='rgba(245,158,11,0.4)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'; this.style.transform='none'">
@@ -2525,7 +2639,7 @@ body {
             <span style="color:var(--ink); font-size:14.5px; font-weight:600;">Conducted regular market scanning and transformed field observations into structured commercial insights.</span>
           </div>
 
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-bottom:18px;">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap:20px; margin-bottom:18px;">
             <div>
               <small style="color:var(--ink-soft); font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:0.05em; display:block; margin-bottom:8px;">Approach</small>
               <ul style="margin:0; padding-left:18px; color:var(--ink-soft); font-size:13.5px; line-height:1.65;">
@@ -2777,7 +2891,7 @@ body {
 
       <!-- Case Study Breakdown -->
       <div style="margin-top:32px; border:1px solid rgba(255,255,255,0.08); background:var(--paper-card); border-radius:var(--radius-md); padding:32px 36px;">
-        <ol class="steps" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+        <ol class="steps" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap:24px;">
           <li>
             <h4>Phase 1: The Tease &amp; Mystery Reveal (Days 1–3)</h4>
             <p>Stretched over three days to build suspense: introducing the 40Love brand narrative, dropping social teasers, revealing the headline partnership with <strong>973 Padel</strong>, and previewing prize pools to prime the market before registration opened.</p>
@@ -2796,7 +2910,7 @@ body {
           </li>
         </ol>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px; margin-top:24px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:20px; margin-top:24px;">
           <div class="note teal" style="margin:0;">
             <strong>Why it worked — Beyond the Court</strong>
             Standard sports events sell court time and tickets. We packaged 40Love as an elite lifestyle festival. By pairing high-stakes athletic competition with deep house soundscapes, hospitality perks for cross-border tourists, and influencer-led cultural buzz, we unlocked major financial backing from Jordan Kuwait Bank and Orange Telecom.
@@ -3649,14 +3763,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (Math.abs(e.deltaY) < 20) return;
 
-    // COVER PAGE SPECIAL CASE: Immediately advance to page 1 on downward scroll
+    // COVER PAGE: If cover fits completely, immediately advance on downward scroll
     if (currentIndex === 0) {
-      if (e.deltaY > 0) {
+      const coverSection = pages[0];
+      const maxScroll = coverSection.scrollHeight - coverSection.clientHeight;
+      if (maxScroll <= 25 && e.deltaY > 0) {
         e.preventDefault();
         lastWheelTime = now;
         goToPage(1);
+        return;
       }
-      return;
     }
 
     const currentSection = pages[currentIndex];
@@ -3707,14 +3823,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (Math.abs(deltaY) > 35 && Math.abs(deltaY) > Math.abs(deltaX)) {
       if (deltaY > 0) {
         // Swiped UP -> want next section
-        if (currentIndex === 0) {
-          goToPage(1);
-          return;
-        }
         const currentSection = pages[currentIndex];
         const maxScroll = currentSection.scrollHeight - currentSection.clientHeight;
         const isScrollable = maxScroll > 25;
-        if (!isScrollable || currentSection.scrollTop >= maxScroll - 25) {
+        if (!isScrollable || currentSection.scrollTop >= maxScroll - 20) {
           goToPage(currentIndex + 1);
         }
       } else {
@@ -3723,7 +3835,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentSection = pages[currentIndex];
         const maxScroll = currentSection.scrollHeight - currentSection.clientHeight;
         const isScrollable = maxScroll > 25;
-        if (!isScrollable || currentSection.scrollTop <= 25) {
+        if (!isScrollable || currentSection.scrollTop <= 20) {
           goToPage(currentIndex - 1);
         }
       }
