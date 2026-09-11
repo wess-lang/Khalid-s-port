@@ -249,11 +249,12 @@ header.cover {
 .shot.ad-shot img {
   min-width: unset !important;
   max-width: 100% !important;
-  max-height: 380px !important;
+  max-height: 440px !important;
   width: auto !important;
   height: auto !important;
   margin: 0 auto !important;
   border-radius: 6px !important;
+  object-fit: contain !important;
 }
 
 /* Cover Section */
@@ -310,12 +311,15 @@ header.cover {
   border: 2px solid rgba(59,130,246,0.4);
   border-radius: 240px 240px 14px 14px;
   overflow: hidden;
-  background: var(--paper-2);
-  aspect-ratio: 3/4;
+  background: #090c13;
+  aspect-ratio: 685/1024;
   box-shadow: var(--shadow-md), var(--glow);
   position: relative;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .arch:hover {
   transform: translateY(-6px) scale(1.02);
@@ -325,8 +329,7 @@ header.cover {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 15%;
+  object-fit: contain;
 }
 
 /* Sections — Fullscreen Page Stack (Book Page System) */
@@ -735,19 +738,24 @@ figcaption {
 .b4 { grid-template-columns: repeat(4, 1fr); }
 .frame {
   border: 1px solid rgba(255,255,255,0.1);
-  background: var(--paper-2);
+  background: #090c13;
   overflow: hidden;
   position: relative;
   border-radius: var(--radius-sm);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 figure:hover .frame {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-md), var(--glow);
-  border-color: rgba(59,130,246,0.3);
+  box-shadow: var(--shadow-md), 0 0 25px rgba(59,130,246,0.25);
+  border-color: rgba(59,130,246,0.4);
 }
 .frame picture {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
@@ -755,16 +763,18 @@ figure:hover .frame {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain !important;
+  transition: opacity 0.3s ease;
 }
 figure:hover .frame img {
-  transform: scale(1.02);
+  transform: none;
 }
-.tall { aspect-ratio: 3/4; }
+.tall { aspect-ratio: 9/13; }
 .wide { aspect-ratio: 16/10; }
 .sq { aspect-ratio: 1; }
-.frame.wide img { object-fit: cover; }
+.frame.wide img, .frame.tall img, .frame.sq img { object-fit: contain !important; }
 
 /* Stats Bar */
 .stats {
@@ -820,8 +830,9 @@ figure:hover .frame img {
 .shot img {
   display: block;
   width: 100%;
-  min-width: 760px;
+  max-width: 100%;
   height: auto;
+  object-fit: contain !important;
 }
 .shot-head {
   display: flex;
@@ -1027,20 +1038,24 @@ figure:hover .frame img {
 }
 .lightbox-content {
   position: relative;
-  max-width: 1000px;
-  max-height: 90vh;
-  width: 100%;
+  max-width: 96vw;
+  max-height: 92vh;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .lightbox-img {
-  max-width: 100%;
-  max-height: 75vh;
-  object-fit: contain;
-  border: 3px solid var(--paper);
+  max-width: 95vw;
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  object-fit: contain !important;
+  border: 2px solid rgba(255,255,255,0.2);
   border-radius: 8px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+  background: #07090e;
 }
 .lightbox-caption {
   margin-top: 14px;
@@ -1805,7 +1820,7 @@ body {
           <div class="shot ad-shot" data-title="Rank #1 (Best Efficiency) — Meta Ads Manager SH002 Viral Engagement (4,761 Engagements @ $0.0012 each)" style="background:#0F1115; padding:16px; display:flex; justify-content:center; cursor:pointer;">
             <picture>
               <source srcset="photos/meta_proof_sh002_00012.jpg" type="image/jpeg">
-              <img src="photos/meta_proof_sh002_00012.svg" alt="Meta Ads Manager showing SH002 with 4,761 post engagements at $0.00121 each" loading="lazy" style="max-height:280px;">
+              <img src="photos/meta_proof_sh002_00012.svg" alt="Meta Ads Manager showing SH002 with 4,761 post engagements at $0.00121 each" loading="lazy">
             </picture>
           </div>
           <div style="padding:18px 22px; border-top:1px solid rgba(255,255,255,0.08); background:var(--paper-2);">
@@ -1837,7 +1852,7 @@ body {
           <div class="shot ad-shot" data-title="Rank #2 (Best Lead CPA) — Meta Business Suite Msg101 Automotive Campaign (183 Leads @ US$0.07 each)" style="background:#0F1115; padding:16px; display:flex; justify-content:center; cursor:pointer;">
             <picture>
               <source srcset="photos/meta_proof_msg101_007.jpg" type="image/jpeg">
-              <img src="photos/meta_proof_msg101_007.svg" alt="Meta Business Suite showing Msg101 with 183 messaging conversations at US$0.07 each" loading="lazy" style="max-height:280px;">
+              <img src="photos/meta_proof_msg101_007.svg" alt="Meta Business Suite showing Msg101 with 183 messaging conversations at US$0.07 each" loading="lazy">
             </picture>
           </div>
           <div style="padding:18px 22px; border-top:1px solid rgba(255,255,255,0.08); background:var(--paper-2);">
@@ -1871,7 +1886,7 @@ body {
           <div class="shot ad-shot" data-title="Rank #3 — Meta Ads Manager Msg campaign test01 (114 Conversations @ $0.21 each)" style="background:#0F1115; padding:12px; display:flex; justify-content:center; cursor:pointer;">
             <picture>
               <source srcset="photos/meta_proof_test01_021_framed.jpg" type="image/jpeg">
-              <img src="photos/meta_proof_test01_021.svg" alt="Meta Ads Manager showing Msg campaign test01 with 114 conversations at $0.21 each" loading="lazy" style="max-height:220px;">
+              <img src="photos/meta_proof_test01_021.svg" alt="Meta Ads Manager showing Msg campaign test01 with 114 conversations at $0.21 each" loading="lazy">
             </picture>
           </div>
           <div style="padding:14px 18px; background:var(--paper-2); font-size:13.5px;">
@@ -1896,7 +1911,7 @@ body {
           <div class="shot ad-shot" data-title="Rank #4 — Meta Ads Manager MSGS.CAMPAGIN.JO (191 Conversations @ $0.29 each)" style="background:#0F1115; padding:12px; display:flex; justify-content:center; cursor:pointer;">
             <picture>
               <source srcset="photos/meta_proof_msgs_jo_029_framed.jpg" type="image/jpeg">
-              <img src="photos/meta_proof_msgs_jo_029.svg" alt="Meta Ads Manager showing MSGS.CAMPAGIN.JO with 191 conversations at $0.29 each" loading="lazy" style="max-height:220px;">
+              <img src="photos/meta_proof_msgs_jo_029.svg" alt="Meta Ads Manager showing MSGS.CAMPAGIN.JO with 191 conversations at $0.29 each" loading="lazy">
             </picture>
           </div>
           <div style="padding:14px 18px; background:var(--paper-2); font-size:13.5px;">
@@ -1921,7 +1936,7 @@ body {
           <div class="shot ad-shot" data-title="Rank #5 — Meta Ads Manager New Engagement Campaign.1 (232 Conversations @ $0.30 each)" style="background:#0F1115; padding:12px; display:flex; justify-content:center; cursor:pointer;">
             <picture>
               <source srcset="photos/meta_proof_scale_030.jpg" type="image/jpeg">
-              <img src="photos/meta_proof_scale_030.svg" alt="Meta Ads Manager showing New Engagement Campaign.1 with 232 conversations held at $0.30 each" loading="lazy" style="max-height:220px;">
+              <img src="photos/meta_proof_scale_030.svg" alt="Meta Ads Manager showing New Engagement Campaign.1 with 232 conversations held at $0.30 each" loading="lazy">
             </picture>
           </div>
           <div style="padding:14px 18px; background:var(--paper-2); font-size:13.5px;">
@@ -1946,7 +1961,7 @@ body {
           <div class="shot ad-shot" data-title="Rank #6 — Meta Ads Manager trail Campaign Lifetime (165 Conversations @ $0.45 each)" style="background:#0F1115; padding:12px; display:flex; justify-content:center; cursor:pointer;">
             <picture>
               <source srcset="photos/meta_proof_trail_045.jpg" type="image/jpeg">
-              <img src="photos/meta_proof_trail_045.svg" alt="Meta Ads Manager trail campaign showing 165 conversations at $0.45" loading="lazy" style="max-height:220px;">
+              <img src="photos/meta_proof_trail_045.svg" alt="Meta Ads Manager trail campaign showing 165 conversations at $0.45" loading="lazy">
             </picture>
           </div>
           <div style="padding:14px 18px; background:var(--paper-2); font-size:13.5px;">
@@ -1979,7 +1994,7 @@ body {
           <div class="shot ad-shot" data-title="Rank #7 (Least Best Baseline) — Meta Ads Manager Ad Set Split Test ($0.50 Winner vs $0.77 Outlier)" style="background:#0F1115; padding:14px; display:flex; justify-content:center; cursor:pointer;">
             <picture>
               <source srcset="photos/meta_proof_split_test_framed.jpg" type="image/jpeg">
-              <img src="photos/meta_proof_split_test.svg" alt="Meta Ads Manager ad set split test showing 236 conversations at $0.50 vs 128 at $0.77" loading="lazy" style="max-height:240px;">
+              <img src="photos/meta_proof_split_test.svg" alt="Meta Ads Manager ad set split test showing 236 conversations at $0.50 vs 128 at $0.77" loading="lazy">
             </picture>
           </div>
           <div style="padding:14px 20px; background:var(--paper-2); font-size:13.5px;">
@@ -2226,8 +2241,8 @@ body {
         </figure>
 
         <!-- Document 5: Field Sales Rep Contract & Shelf Share Audit -->
-        <figure data-title="Field Representative Contract &amp; Shelf Share Audit — Sports City &amp; Bayader (Khattab Group)">
-          <div class="frame tall" style="background:#141419; border:1px solid rgba(255,255,255,0.12); border-radius:12px; overflow:hidden;">
+        <figure data-title="Field Representative Contract &amp; Shelf Share Audit — Sports City &amp; Bayader (Khattab Group)" style="grid-column: span min(2, 100%);">
+          <div class="frame wide" style="aspect-ratio:1024/350; background:#141419; border:1px solid rgba(255,255,255,0.12); border-radius:12px; overflow:hidden;">
             <picture>
               <source srcset="photos/study_field_contract_share.jpg" type="image/jpeg">
               <img src="photos/study_field_contract_share.jpg" alt="Field sales representative contract and shelf share compliance audit sheet across retail branches" loading="lazy" style="object-fit:contain; width:100%; height:100%; background:#101116;">
@@ -2240,8 +2255,8 @@ body {
         </figure>
 
         <!-- Document 6: Competitor Price Index & Hypermarket Benchmarking Matrix -->
-        <figure data-title="Retail Competitor Pricing &amp; Hypermarket Benchmarking Matrix — Cozmo, Safeway, Yaser Mall &amp; HyperMax">
-          <div class="frame tall" style="background:#141419; border:1px solid rgba(255,255,255,0.12); border-radius:12px; overflow:hidden;">
+        <figure data-title="Retail Competitor Pricing &amp; Hypermarket Benchmarking Matrix — Cozmo, Safeway, Yaser Mall &amp; HyperMax" style="grid-column: span min(2, 100%);">
+          <div class="frame wide" style="aspect-ratio:1024/743; background:#141419; border:1px solid rgba(255,255,255,0.12); border-radius:12px; overflow:hidden;">
             <picture>
               <source srcset="photos/study_competitor_pricing_matrix.jpg" type="image/jpeg">
               <img src="photos/study_competitor_pricing_matrix.jpg" alt="Retail competitor price index and benchmarking matrix across Cozmo Safeway Yaser Mall and HyperMax" loading="lazy" style="object-fit:contain; width:100%; height:100%; background:#101116;">
@@ -2373,7 +2388,7 @@ body {
 
       <div class="case" style="margin-top:28px">
         <figure data-title="Hongqi Amman Teaser & Reveal Street Billboards">
-          <div class="frame" style="aspect-ratio:3/4">
+          <div class="frame tall">
             <picture>
               <source srcset="photos/hongqi_ooh.jpg" type="image/jpeg">
               <img src="photos/hongqi_ooh.svg" alt="Hongqi teaser and reveal billboards in Arabic" loading="lazy">
@@ -2403,8 +2418,8 @@ body {
         </div>
       </div>
       
-      <figure style="margin-top:28px; max-width:calc(50% - 24px)" data-title="Hongqi Luxury Automotive Concept Presentation Deck">
-        <div class="frame" style="aspect-ratio:3/4">
+      <figure style="margin-top:28px; max-width:540px" data-title="Hongqi Luxury Automotive Concept Presentation Deck">
+        <div class="frame tall">
           <picture>
             <source srcset="photos/hongqi_idea.jpg" type="image/jpeg">
             <img src="photos/hongqi_idea.svg" alt="Hongqi campaign concept deck opening slides" loading="lazy">
@@ -2429,7 +2444,7 @@ body {
       <!-- High-Impact 3-Card Band -->
       <div class="band b3" style="margin:28px 0">
         <figure data-title="40Love × 973 Padel — Official Tournament Launch Key Visual">
-          <div class="frame" style="aspect-ratio:16/10">
+          <div class="frame wide" style="aspect-ratio:16/9">
             <picture>
               <source srcset="photos/40love_hero_poster.jpg" type="image/jpeg">
               <img src="photos/40love_hero_poster.svg" alt="40Love tournament launch key visual with Jordan Kuwait Bank and Orange" loading="lazy">
@@ -2439,7 +2454,7 @@ body {
         </figure>
 
         <figure data-title="40Love Lounge &amp; Terrace Cafe Brand Identity">
-          <div class="frame" style="aspect-ratio:16/10">
+          <div class="frame wide" style="aspect-ratio:16/9">
             <picture>
               <source srcset="photos/40love_venue_lounge.jpg" type="image/jpeg">
               <img src="photos/40love_venue_lounge.svg" alt="40Love venue terrace lounge and branding" loading="lazy">
@@ -2449,7 +2464,7 @@ body {
         </figure>
 
         <figure data-title="Influencer Roster &amp; Viewership Reach Model">
-          <div class="frame" style="aspect-ratio:16/10">
+          <div class="frame wide" style="aspect-ratio:16/9">
             <picture>
               <source srcset="photos/40love_influencer_matrix.jpg" type="image/jpeg">
               <img src="photos/40love_influencer_matrix.svg" alt="Influencer selection and pricing model" loading="lazy">
@@ -2462,7 +2477,7 @@ body {
       <!-- Case Study Breakdown -->
       <div class="case" style="margin-top:28px">
         <figure data-title="40Love × 973 Padel Strategic Tournament Blueprint">
-          <div class="frame" style="aspect-ratio:3/4">
+          <div class="frame" style="aspect-ratio:1179/1350">
             <picture>
               <source srcset="photos/40love_strategy.jpg" type="image/jpeg">
               <img src="photos/40love_strategy.svg" alt="40Love tournament blueprint and strategic roadmap" loading="lazy">
@@ -2582,7 +2597,7 @@ body {
     </div>
     <div class="case">
       <figure data-title="Graduation Ceremony Stage & Live Video Rig">
-        <div class="frame wide">
+        <div class="frame tall">
           <picture>
             <source srcset="photos/graduation.jpg" type="image/jpeg">
             <img src="photos/graduation.svg" alt="Graduation ceremony stage set with branded backdrop" loading="lazy">
@@ -2641,7 +2656,7 @@ body {
     </div>
     <div class="case">
       <figure data-title="Lifey and Baby Life Trade Floor Range Shelf">
-        <div class="frame wide">
+        <div class="frame tall">
           <picture>
             <source srcset="photos/lifey_shelf.jpg" type="image/jpeg">
             <img src="photos/lifey_shelf.svg" alt="Lifey and Baby Life product display at a trade exhibition" loading="lazy">
@@ -2774,7 +2789,7 @@ body {
           <div style="aspect-ratio:1024/581; overflow:hidden;">
             <picture>
               <source srcset="photos/madame_coco_live_hero.jpg" type="image/jpeg">
-              <img src="photos/madame_coco_live_hero.jpg" alt="Madame Coco Jordan storefront seasonal campaign hero with Bon China launch, live 50% discount ticker ribbon and 99 JOD free shipping bar" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;">
+              <img src="photos/madame_coco_live_hero.jpg" alt="Madame Coco Jordan storefront seasonal campaign hero with Bon China launch, live 50% discount ticker ribbon and 99 JOD free shipping bar" loading="lazy" style="width:100%; height:100%; object-fit:contain; display:block;">
             </picture>
           </div>
         </div>
@@ -2796,7 +2811,7 @@ body {
           <div style="aspect-ratio:1024/581; overflow:hidden;">
             <picture>
               <source srcset="photos/madame_coco_live_categories.jpg" type="image/jpeg">
-              <img src="photos/madame_coco_live_categories.jpg" alt="Madame Coco Jordan 8-category visual browse grid (Bedroom, Bathroom, Kitchen, Carpet & Rug, Decoration, Cosmetic, Tableware, Lighting)" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;">
+              <img src="photos/madame_coco_live_categories.jpg" alt="Madame Coco Jordan 8-category visual browse grid (Bedroom, Bathroom, Kitchen, Carpet & Rug, Decoration, Cosmetic, Tableware, Lighting)" loading="lazy" style="width:100%; height:100%; object-fit:contain; display:block;">
             </picture>
           </div>
         </div>
@@ -2825,7 +2840,7 @@ body {
     </div>
     <div class="band b4">
       <figure data-title="Venome Clinic Luxury Gifting Box">
-        <div class="frame sq">
+        <div class="frame tall">
           <picture>
             <source srcset="photos/venome_gift1.jpg" type="image/jpeg">
             <img src="photos/venome_gift1.svg" alt="Venome branded strawberry arrangements in acrylic boxes" loading="lazy">
@@ -2834,7 +2849,7 @@ body {
         <figcaption>Venome clinic gifting run.</figcaption>
       </figure>
       <figure data-title="Venome Monogram Packaging & Satin Ribbon System">
-        <div class="frame sq">
+        <div class="frame tall">
           <picture>
             <source srcset="photos/venome_gift2.jpg" type="image/jpeg">
             <img src="photos/venome_gift2.svg" alt="Venome monogram wrapped gift boxes" loading="lazy">
@@ -2843,7 +2858,7 @@ body {
         <figcaption>Monogram wrap and ribbon system.</figcaption>
       </figure>
       <figure data-title="White Glo Ramadan VIP Gift Box">
-        <div class="frame sq">
+        <div class="frame tall">
           <picture>
             <source srcset="photos/ramadan.jpg" type="image/jpeg">
             <img src="photos/ramadan.svg" alt="White Glo Ramadan seasonal gift box" loading="lazy">
@@ -2852,7 +2867,7 @@ body {
         <figcaption>White Glo Ramadan pack.</figcaption>
       </figure>
       <figure data-title="Pharma Care Branded Conference Carrier Bag">
-        <div class="frame sq">
+        <div class="frame tall">
           <picture>
             <source srcset="photos/pharma_bag.jpg" type="image/jpeg">
             <img src="photos/pharma_bag.svg" alt="Pharma Care branded carrier bag" loading="lazy">
@@ -2975,7 +2990,9 @@ document.querySelectorAll('figure, .arch, .shot').forEach(el => {
     const img = el.querySelector('img');
     if (!img) return;
     const title = el.getAttribute('data-title') || el.querySelector('figcaption')?.textContent || img.getAttribute('alt') || '';
-    openLightbox(img.currentSrc || img.src, title);
+    const source = el.querySelector('source[srcset]');
+    const targetSrc = source ? source.getAttribute('srcset') : (img.currentSrc || img.src);
+    openLightbox(targetSrc, title);
   });
 });
 
